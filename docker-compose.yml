@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  confine-backend:
+    build: ./backend
+    container_name: confine-backend
+    ports:
+      - 443:443
