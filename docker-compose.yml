@@ -5,3 +5,11 @@ services:
     container_name: confine-backend
     ports:
       - 443:443
+
+  confine-database:
+    image: postgres:15
+    container_name: confine-database
+    ports:
+      - 5432:5432
+    env_file:
+      - database.env
