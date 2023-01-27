@@ -22,9 +22,7 @@ RUN yarn
 RUN chown -R node .
 
 # Change to user
-COPY . ./
-RUN chown -R node src
-RUN chown -R src
+COPY --chown=node . ./
 USER node
 
 # Run
